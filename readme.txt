@@ -3,8 +3,8 @@ Contributors: Jacob M Goldman (C. Murray Consulting)
 Donate link: http://www.cmurrayconsulting.com/software/wordpress-mce-table-buttons/
 Tags: tables, editor, WYSIWYG, buttons
 Requires at least: 2.8
-Tested up to: 2.8.5
-Stable tag: 1.0
+Tested up to: 2.8.6
+Stable tag: 1.0.1
 
 Adds table editing buttons to a new, third row in the WordPress WYSIWYG editor.
 
@@ -34,3 +34,9 @@ update.
 == Screenshots ==
 
 1. The editor with the new table editing controls.
+
+== Changelog ==
+
+=1.0.1=
+
+Fixed issue with WebKit browsers (Safari and Chrome) - TinyMCE bug

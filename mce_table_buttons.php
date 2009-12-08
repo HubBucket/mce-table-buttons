@@ -3,7 +3,7 @@
  Plugin Name: MCE Table Buttons
  Plugin URI: http://www.cmurrayconsulting.com/software/wordpress-mce-table-buttons/
  Description: Add <strong>buttons for table editing</strong> to the WordPress WYSIWYG editor with this very <strong>light weight</strong> plug-in.    
- Version: 1.0
+ Version: 1.0.1
  Author: Jacob M Goldman (C. Murray Consulting)
  Author URI: http://www.cmurrayconsulting.com
 
