@@ -1,13 +1,13 @@
 <?php
 /**
  Plugin Name: MCE Table Buttons
- Plugin URI: http://www.cmurrayconsulting.com/software/wordpress-mce-table-buttons/
+ Plugin URI: http://www.thinkoomph.com/plugins-modules/wordpress-mce-table-buttons/
  Description: Add <strong>buttons for table editing</strong> to the WordPress WYSIWYG editor with this very <strong>light weight</strong> plug-in.    
- Version: 1.0.2
- Author: Jacob M Goldman (C. Murray Consulting)
- Author URI: http://www.cmurrayconsulting.com
+ Version: 1.0.3
+ Author: Jake Goldman (Oomph, Inc)
+ Author URI: http://www.thinkoomph.com
 
-    Plugin: Copyright 2009 C. Murray Consulting  (email : jake@cmurrayconsulting.com)
+    Plugin: Copyright 2011 Oomph, Inc  (email : jake@thinkoomph.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -24,37 +24,39 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-add_action("admin_init","mce_table_buttons_setup");
-
-function mce_table_buttons_setup() 
+class mce_table_buttons 
 {
-	if ( get_user_option('rich_editing') == 'true' ) 
+	function __construct() 
 	{
-		add_filter( 'mce_external_plugins', 'add_mce_table_plugin' );
-		add_filter( 'mce_buttons_3', 'mce_table_buttons' );
+		add_action( 'admin_init', array( $this, 'admin_init' ) );
+		add_action( 'content_save_pre', array( $this, 'content_save_pre'), 100 );
+	}
+	
+	function admin_init()
+	{
+		add_filter( 'mce_external_plugins', array( $this, 'mce_external_plugins' ) );
+		add_filter( 'mce_buttons_3', array( $this, 'mce_buttons_3' ) );
+	}
+	
+	function mce_external_plugins( $plugin_array )
+	{
+		$plugin_array['table'] = plugin_dir_url( __FILE__ ) . 'mce-table/editor_plugin.js';
+   		return $plugin_array;
+	}
+	
+	function mce_buttons_3( $buttons )
+	{
+		array_push( $buttons, 'tablecontrols' );
+   		return $buttons;
+	}
+	
+	function content_save_pre( $content )
+	{
+		if ( substr( $content, -8 ) == '</table>' )
+			$content = $content . "\n<br />";
+		
+		return $content;
 	}
 }
 
-function add_mce_table_plugin( $plugin_array ) 
-{
-   $plugin_array['table'] = WP_PLUGIN_URL . '/' . basename( dirname(__FILE__) ) .'/mce-table/editor_plugin.js';
-   return $plugin_array;
-}
-
-function mce_table_buttons($buttons) 
-{
-   array_push( $buttons, "tablecontrols" );
-   return $buttons;
-}
-
-// fix for improper save your changes requests
-
-add_action( 'content_save_pre', 'mce_table_ender', 100 );
-
-function mce_table_ender( $content )
-{
-	if ( substr( $content, -8 ) == '</table>' )
-		$content = $content . "\n<br />";
-		
-	return $content;
-}
+$mce_table_buttons = new mce_table_buttons;
