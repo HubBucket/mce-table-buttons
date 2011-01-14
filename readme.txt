@@ -1,5 +1,5 @@
 === MCE Table Buttons ===
-Contributors: Jake Goldman (Oomph, Inc)
+Contributors: jakemgold
 Donate link: http://www.thinkoomph.com/plugins-modules/wordpress-mce-table-buttons/
 Tags: tables, table, editor, WYSIWYG, buttons, tinymce
 Requires at least: 2.8
