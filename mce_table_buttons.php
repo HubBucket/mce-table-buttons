@@ -1,13 +1,13 @@
 <?php
 /**
  Plugin Name: MCE Table Buttons
- Plugin URI: http://www.thinkoomph.com/plugins-modules/wordpress-mce-table-buttons/
+ Plugin URI: http://www.get10up.com/plugins-modules/wordpress-mce-table-buttons/
  Description: Add <strong>buttons for table editing</strong> to the WordPress WYSIWYG editor with this very <strong>light weight</strong> plug-in.    
- Version: 1.0.3
- Author: Jake Goldman (Oomph, Inc)
- Author URI: http://www.thinkoomph.com
+ Version: 1.0.3.1
+ Author: Jake Goldman
+ Author URI: http://www.get10up.com
 
-    Plugin: Copyright 2011 Oomph, Inc  (email : jake@thinkoomph.com)
+    Plugin: Copyright 2011 Jake Goldman (email : jake@get10up.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
