@@ -3,7 +3,7 @@
  Plugin Name: MCE Table Buttons
  Plugin URI: http://www.get10up.com/plugins-modules/wordpress-mce-table-buttons/
  Description: Add <strong>buttons for table editing</strong> to the WordPress WYSIWYG editor with this very <strong>light weight</strong> plug-in.    
- Version: 1.0.3.1
+ Version: 1.0.4
  Author: Jake Goldman
  Author URI: http://www.get10up.com
 
@@ -40,7 +40,11 @@ class mce_table_buttons
 	
 	function mce_external_plugins( $plugin_array )
 	{
-		$plugin_array['table'] = plugin_dir_url( __FILE__ ) . 'mce-table/editor_plugin.js';
+		if ( get_option('db_version') < 17056 ) // 17056 is WordPress 3.1
+			$plugin_array['table'] = plugin_dir_url( __FILE__ ) . 'table-old/editor_plugin.js';
+		else 
+			$plugin_array['table'] = plugin_dir_url( __FILE__ ) . 'table/editor_plugin.js';
+   		
    		return $plugin_array;
 	}
 	

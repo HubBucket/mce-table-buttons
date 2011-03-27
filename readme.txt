@@ -1,10 +1,10 @@
 === MCE Table Buttons ===
-Contributors: jakemgold
+Contributors: jakemgold, thinkoomph
 Donate link: http://www.get10up.com/plugins-modules/wordpress-mce-table-buttons/
 Tags: tables, table, editor, WYSIWYG, buttons, tinymce
 Requires at least: 2.8
 Tested up to: 3.1
-Stable tag: 1.0.3.1
+Stable tag: 1.0.4
 
 Adds table editing buttons to a new, third row in the WordPress WYSIWYG editor.
 
@@ -29,6 +29,9 @@ Hoping to add the ability to hide the new table editing toolbar with the "kitche
 1. The editor with the new table editing controls.
 
 == Changelog ==
+
+= 1.0.4 =
+* Updated TinyMCE table plug-in to corresponding TinyMCE update in WordPress 3.1 (still supports <3.1 too)
 
 = 1.0.3.1 =
 * Updated support / developer information
