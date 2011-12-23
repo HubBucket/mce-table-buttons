@@ -1,10 +1,10 @@
 === MCE Table Buttons ===
-Contributors: jakemgold, thinkoomph
+Contributors: jakemgold, 10up, thinkoomph
 Donate link: http://www.get10up.com/plugins-modules/wordpress-mce-table-buttons/
 Tags: tables, table, editor, WYSIWYG, buttons, tinymce
-Requires at least: 2.8
-Tested up to: 3.1
-Stable tag: 1.0.4
+Requires at least: 3.3
+Tested up to: 3.3
+Stable tag: 1.5
 
 Adds table editing buttons to a new, third row in the WordPress WYSIWYG editor.
 
@@ -12,10 +12,9 @@ Adds table editing buttons to a new, third row in the WordPress WYSIWYG editor.
 
 Adds table editing buttons to a new, third row in the WordPress WYSIWYG editor.
 
-A very light weight plug-in based on a slightly modified version of the table editor plug-in included with the full version of TinyMCE 3.2.7. Only includes English localization; please let us know if you would like additional localizations added. Note that this should not be used with other plug-ins that significantly alter the editor's default behavior. It is intended to be a simple, light weight solution for editors who only want to add table management to WordPress' included editor.
+A very light weight plug-in based on a slightly modified version of the table editor plug-in included with the full version of TinyMCE. Only includes English localization; please let us know if you would like additional localizations added. Note that this should not be used with other plug-ins that significantly alter the editor's default behavior. It is intended to be a simple, light weight solution for editors who only want to add table management to WordPress' included editor.
 
-Hoping to add the ability to hide the new table editing toolbar with the "kitchen sink" option in a future  update.
-
+The third, editor toolbar is hidden or displayed along with the "kitchen sink."
 
 == Installation ==
 
@@ -23,12 +22,15 @@ Hoping to add the ability to hide the new table editing toolbar with the "kitche
 `mce-table-buttons` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
-
 == Screenshots ==
 
 1. The editor with the new table editing controls.
 
 == Changelog ==
+
+= 1.5 =
+* Table toolbar is hidden or displayed along with the kitchen sink (yay!)
+* Minor clean up to code base and files; optimized for WordPress 3.3
 
 = 1.0.4 =
 * Updated TinyMCE table plug-in to corresponding TinyMCE update in WordPress 3.1 (still supports <3.1 too)
@@ -45,3 +47,8 @@ Hoping to add the ability to hide the new table editing toolbar with the "kitche
 
 = 1.0.1 =
 * Fixed issue with WebKit browsers (Safari and Chrome) - TinyMCE bug
+
+== Upgrade Notice ==
+
+= 1.5 =
+REQUIRES WordPress 3.3 or higher. Finally links table buttons row to kitchen sink!
