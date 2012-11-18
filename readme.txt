@@ -1,10 +1,10 @@
 === MCE Table Buttons ===
 Contributors: jakemgold, 10up, thinkoomph
-Donate link: http://www.get10up.com/plugins-modules/wordpress-mce-table-buttons/
+Donate link: http://10up.com/plugins-modules/wordpress-mce-table-buttons/
 Tags: tables, table, editor, WYSIWYG, buttons, tinymce
-Requires at least: 3.3
-Tested up to: 3.3
-Stable tag: 1.5
+Requires at least: 3.4
+Tested up to: 3.5
+Stable tag: 2.0
 
 Adds table editing buttons to a new, third row in the WordPress WYSIWYG editor.
 
@@ -12,21 +12,28 @@ Adds table editing buttons to a new, third row in the WordPress WYSIWYG editor.
 
 Adds table editing buttons to a new, third row in the WordPress WYSIWYG editor.
 
-A very light weight plug-in based on a slightly modified version of the table editor plug-in included with the full version of TinyMCE. Only includes English localization; please let us know if you would like additional localizations added. Note that this should not be used with other plug-ins that significantly alter the editor's default behavior. It is intended to be a simple, light weight solution for editors who only want to add table management to WordPress' included editor.
+A light weight plug-in that restores the table editing buttons from the full version of TinyMCE, optimized for WordPress. Note that this should not be used with other plug-ins that significantly alter the editor's default behavior.
 
-The third, editor toolbar is hidden or displayed along with the "kitchen sink."
+The third, editor toolbar is hidden or displayed with the "kitchen sink" (just like the second toolbar row).
 
 == Installation ==
 
 1. Install easily with the WordPress plugin control panel or manually download the plugin and upload the folder 
 `mce-table-buttons` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Show the toolbar in the editor by opening the "kitchen sink" (the last button in the first row)
 
 == Screenshots ==
 
 1. The editor with the new table editing controls.
 
 == Changelog ==
+
+= 2.0 =
+* New button icons that better conform with WordPress's editor design
+* Retina (HiDPI) ready button icons!
+* Upgraded to latest version of TinyMCE tables plugin (fixes a lot of edge case bugs)
+* Rewrote code for hiding / display toolbar with kitchen sink (now a TinyMCE plug-in instead of a workaround) - the table buttons no longer briefly appear before page loading is finished
 
 = 1.5 =
 * Table toolbar is hidden or displayed along with the kitchen sink (yay!)
